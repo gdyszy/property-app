@@ -312,23 +312,10 @@
 						url: `/pages/webview/index?path=${p}`
 					})
 				}else if(data.type==="phone"){
-					if(data.path){
-						// #ifdef MP||APP-PLUS
 					uni.makePhoneCall({
 						phoneNumber: data.path,
 						success() {}
 					})	
-					// #endif
-					// #ifdef H5
-					uni.showToast({
-						title: "当前运行环境不支持拨打电话！",
-						icon: 'none'
-					})
-					// #endif
-					}else{
-						return
-					}
-					
 				}
 				else if (notice>1) {
 					uni.navigateTo({
