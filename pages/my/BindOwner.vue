@@ -114,7 +114,8 @@ export default {
 			  	success(res) {
 			  		if (res.confirm) {} else if (res.cancel) {
 			  				that.request({
-			  					 url:'/v1/members/'+userInfo.client.user_id+'?handler=unbundle'
+			  					 url:'/v1/members/'+userInfo.client.user_id+'?handler=unbundle',
+								 method: 'PUT'
 			  				}).then( (res)=>{
 			  					  if(res.code === 200){
 			  						  uni.$emit('login', "未绑定");
