@@ -160,7 +160,7 @@
 			 let value = e.detail.value
 			 const reg_sfz = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
 			 
-			 if(!reg_sfz.test(value.myID)){
+			 if(!reg_sfz.test(value.myID)&&value.myID){
 				 uni.showToast({
 				 	title:'身份证填写错误',
 				 	icon:"none"
