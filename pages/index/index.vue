@@ -3,7 +3,7 @@
 		<view class="image_content">
 			<swiper :autoplay="true" :interval="5000" :duration="1000" :circular='true' indicator-dots="true" indicator-color="#999999"
 			 indicator-active-color="#e4e4e4" duration="1000" class="swiperBox">
-				<swiper-item v-for="(item) in bannerList" :key='item.id'>
+				<swiper-item v-for="(item) in bannerList" :key='item.id' @click="openLink(item.link)">
 					<view class="swiper-item">
 						<image style="width: 100%; height: 370rpx;" :src="item.image" lazy-load mode="scaleToFill"></image>
 					</view>
@@ -301,6 +301,15 @@
 						url: '../myMessage/index'
 					})
 				}
+			},
+			openLink(link){
+				if(link==''){
+					return false
+				}
+			let p = encodeURIComponent(link)
+			uni.navigateTo({
+				url: `/pages/webview/index?path=${p}`
+			})	
 			},
 			openClass(data) {
 				let userInfo = uni.getStorageSync('myinfo');
