@@ -223,7 +223,10 @@ H5 版本二维码
 
 ![](https://wiki.yszyun.com/uploads/moa-admin/images/m_a3639d790e5a0b1f9d1a1dd5e695894c_r.png)
 
+<<<<<<< HEAD
 
 前端免费开源，后端付费，详情咨询电话： 400-008-1668
 >>>>>>> b6b4e2b (1.修复家庭成员管理-性别选择参数 错误)
 邮箱：marketing@yszyun.com
+=======
+>>>>>>> 534ef1f (修改说明)
