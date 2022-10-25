@@ -3,7 +3,7 @@
 		<view class="box">
 			<view class="head">
 				成员信息
-				<view class="ber_del" @tap='delBar()' v-if="ownerType == 1">删除</view>
+				<view class="ber_del" @tap='delBar()' v-if="msg.owner_type != 1">删除</view>
 			</view>
 			<view class="title">基本信息</view>
 			<view class="textInput">

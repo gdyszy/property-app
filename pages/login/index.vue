@@ -13,6 +13,9 @@
 	<!-- 	<view class="regbutton_login" @click='wechatLogin' v-if="H5Wechat">
 			<button class="button" open-type='getUserInfo'>微信快捷登录/注册</button>
 		</view> -->
+		<view class="regbutton_login" @click='wechatLogin' v-if="H5Wechat">
+			<button class="button" open-type='getUserInfo'>微信快捷登录/注册</button>
+		</view>
 		<view class="regbutton_login" @click="clickonlog">
 			<button class="regbutton">账号快捷登录/注册</button>
 		</view>

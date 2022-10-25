@@ -113,9 +113,9 @@
 			selectSex(n) {
 				this.sex = n
 				if(n === 0){
-					this.gender = '男'
+					this.gender = 1
 				}else{
-					this.gender = '女'
+					this.gender = 0
 				}
 			},
 			getCode(){

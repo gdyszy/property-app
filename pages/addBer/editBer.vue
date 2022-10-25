@@ -27,7 +27,7 @@
 				</view>
 			</view>
 			<view class="msg">
-				<view class="text">出生日期<i style="color: #d93232;">*</i></view>
+				<view class="text">出生日期</view>
 				<picker class="pickerSelect" mode="date" :value="date" :start="startDate" :end="endDate"
 					@change="bindDateChange">
 					<view style="font-size: 30rpx;display: flex;">{{date}}
@@ -40,20 +40,20 @@
 				</picker>
 			</view>
 			<view class="msg">
-				<view class="text">身份证号<i style="color: #d93232;">*</i></view>
+				<view class="text">身份证号</view>
 				<input type="text" v-model="peopleID" maxlength="18" />
 			</view>
-			<view class="msg">
+			<view class="msg" v-if="owner_type != 1">
 				<view class="text">成员类型<i style="color: #d93232;">*</i></view>
 				<view class="select">
-					<view class="select_option" :class="{'selected':owner_type === 0}" @tap='selectOtype(2)'>
-						<image src="../../static/images/familyBer/btn_03_nor.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin-right: 8rpx;" v-if="owner_type === 3" />
-						<image src="../../static/images/familyBer/btn_02_sel.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin-right: 8rpx;" v-else />
+					<view class="select_option" :class="{'selected':owner_type === 0}" @tap='selectOtype(0)'>
+						<image src="../../static/images/familyBer/btn_02_sel.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin-right: 8rpx;" v-if="owner_type === 0"/>
+						<image src="../../static/images/familyBer/btn_03_nor.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin-right: 8rpx;" v-else/>
 						<view>家庭成员</view>
 					</view>
-					<view class="select_option" :class="{'selected':owner_type === 1}" @tap='selectOtype(3)'>
-						<image src="../../static/images/familyBer/btn_03_nor.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin: 0 8rpx 0 52rpx;" v-if="owner_type === 2"/>
-						<image src="../../static/images/familyBer/btn_02_sel.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin: 0 8rpx 0 52rpx;" v-else />
+					<view class="select_option" :class="{'selected':owner_type === 1}" @tap='selectOtype(1)'>
+						<image src="../../static/images/familyBer/btn_02_sel.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin: 0 8rpx 0 52rpx;" v-if="owner_type === 1"/>
+						<image src="../../static/images/familyBer/btn_03_nor.png" mode="aspectFill" style="width: 48rpx; height: 48rpx; margin: 0 8rpx 0 52rpx;" v-else/>
 						<view>租户</view>
 					</view>
 				</view>
@@ -68,12 +68,12 @@
 				<view style="display: flex; align-items: center;">
 					<input type="text" v-model="code" @focus="code=''" @blur="code==''?code='请输入验证码':''"
 						adjust-position />
-					<view class="code" @tap='getCode' v-if="!resend && owner_type == 1">获取验证码</view>
+					<view class="code" @tap='getCode' v-if="!resend">获取验证码</view>
 					<view class="resend" v-if="resend">重新获取({{ countdown }})</view>
 				</view>
 			</view>
 		</view>
-		<view class="btn" @tap="save()" v-if="owner_type == 1">保存</view>
+		<view class="btn" @tap="save()">保存</view>
 	</view>
 </template>
 
@@ -98,7 +98,7 @@
 				date: currentDate,
 				berId: '',
 				otype:'家庭成员',
-				owner_type:2,
+				owner_type:0,
 			}
 		},
 		computed: {
@@ -134,9 +134,9 @@
 			selectSex(n) {
 				this.sex = n
 				if (n === 1) {
-					this.gender = '男'
+					this.gender = 1
 				} else {
-					this.gender = '女'
+					this.gender = 0
 				}
 			},
 			getCode() {
@@ -246,9 +246,9 @@
 						duration: 2000
 					})
 					if (res.code === 200) {
-						uni.navigateTo({
-							url: '../index/index'
-						})
+						 setTimeout(() => uni.navigateBack({
+						delta: 2,
+						}), 500)
 					}
 				})
 			}

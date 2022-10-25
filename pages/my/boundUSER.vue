@@ -82,7 +82,6 @@
 				<view class="danxuan">
 					<view class="fee_rad">
 					<view class="fee_radio2">身份证号
-					<text class="star">*</text>
 					</view>
 					</view>
 					<view class="input ">
