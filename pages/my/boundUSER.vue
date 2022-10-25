@@ -69,12 +69,12 @@
 			<view class="dem_message">
 				<view class="danxuan">
 					<view class="fee_rad">
-					<view class="fee_radio2">房产编号
+					<view class="fee_radio2">房号
 					<text class="star">*</text>
 					</view>
 					</view>
 					<view class="input ">
-						<input name="myHouse" v-model="myHouse" type="text" :placeholder="housePalceholder" @blur="myHouse==''?housePalceholder = '请输入房产编号':''" @focus="housePalceholder = ''" />
+						<input name="myHouse" v-model="myHouse" type="text" :placeholder="housePalceholder" @blur="myHouse==''?housePalceholder = '请输入房号':''" @focus="housePalceholder = ''" />
 					</view>
 				</view>
 			</view>
@@ -96,13 +96,26 @@
 					<text class="star">*</text>
 					</view>
 					</view>
-					<view class="input ">
+					<!-- <view class="input ">
 						<input name="myPhone" v-model="inputPhone" @focus='phonePlaceholder = ""' type="text" :placeholder="phonePlaceholder" @blur="inputPhone==''?phonePlaceholder='请输入电话号码':''" cursor-spacing="80" maxlength="11" />
+					</view> -->
+					<view class="inputCode input ">
+						<input name="myPhone" disabled="true" v-model="inputPhone" @focus='phonePlaceholder = ""' type="text" :placeholder="phonePlaceholder" @blur="inputPhone==''?phonePlaceholder='手机号码':''" cursor-spacing="80" maxlength="11" />
+						<button class="code"  open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">获取手机号</button>
 					</view>
+					<wyb-loading ref="loading" title="加载中..."/>
 				</view>
 			</view>
-			
-			<view class="dem_message">
+			<view class="checkbox-xy">
+			<!-- 同意服务条款 -->
+			<checkbox-group :class="checked == 1 ? 'shake-horizontal' : ''" class="auth-clause" @change="CheckboxChange">
+				<checkbox class="orange" :class="checked == 2 ? 'checked' : ''" :checked="checked == 2 ? true : false" value="2" />
+				<view>
+					我已阅读<text class="linkxy" @tap="onDetails(8, '用户协议')">用户协议</text>及<text class="linkxy" @tap="onDetails(9, '隐私保护')">隐私权保护声明</text>
+				</view>
+			</checkbox-group>
+			</view>
+<!-- 			<view class="dem_message">
 				<view class="danxuan">
 					<view class="fee_rad">
 						<view class="fee_radio2">验证码
@@ -115,7 +128,7 @@
 						<view class="code" v-else>{{second+'s'}}</view>
 					</view>
 				</view>
-			</view>
+			</view> -->
 			
 			<view>
 				<button class="button" type='default'  form-type="submit">提交</button>
@@ -127,10 +140,14 @@
 </template>
 
 <script>
+	import wybLoading from '@/components/wyb-loading/wyb-loading.vue'
+	import md5 from '../../common/md5.js'
 	export default {
 	props: {},
 	data() {
 		return {
+			checked: 0,
+			isChecked:false,
 			region:[], // 选择地区
 			index:0, //默认下标为0
 			CM:'',
@@ -142,20 +159,71 @@
 			namePlaeholder: '请输入姓名',
 			myName: '',
 			myHouse: '',
-			housePalceholder: '请输入房产编号',
+			housePalceholder: '请输入房号',
 			inputPhone: '',
-			phonePlaceholder: '请输入电话号码',
+			phonePlaceholder: '手机号码',
 			codePlaceholder: '请输入验证码',
-			code: ''
+			code: '',
+			loginRes:''
 		};
+	},
+	components:{
+		wybLoading
 	},
 	onLoad() {
 		this.communities()
-		
+		wx.login({
+		      success: res => {
+		     this.loginRes = res.code
+		      }
+		    })
 	},
 	methods: {
+		CheckboxChange(e) {
+			this.checked = e.detail.value;
+			this.isChecked = !this.isChecked
+		},
+		getPhoneNumber(e){
+			let that = this
+			let getData = {
+				encryptedData:e.detail.encryptedData,
+				iv:e.detail.iv,
+				code:this.loginRes
+			}
+			uni.checkSession({
+				success(e) {
+				},
+				fail() {
+					wx.login({
+					      success: res => {
+					     that.loginRes = res.code
+					      }
+					    })
+				},
+				complete() {
+			that.request({
+			  url:'/v1/token/get_phone_number',
+			  method:'POST',
+			  data:getData
+			}).then((res)=>{
+				if(res.code==200){
+					that.inputPhone = res.data.tel
+				}
+			})
+				}
+			})
+
+		},
 		//提交表单
 		async formsubmit(e){
+			if(!this.isChecked){
+				uni.showToast({
+					title: '请勾选同意选项',
+					icon: 'none',
+					duration: 2000,
+				});
+				return
+			}
 			 let userInfo = uni.getStorageSync('myinfo');
 			 let value = e.detail.value
 			 const reg_sfz = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
@@ -173,7 +241,7 @@
 				 method:'PUT',
 				 data:{
 					 community_code:Object.keys(this.CM)[0],
-					 house_code:value.myHouse,
+					 house_name:value.myHouse,
 					 name:value.myName,
 					 identity_id:value.myID,
 					 tel:value.myPhone,
@@ -346,9 +414,9 @@
 		align-items: center;
 		// height: 100rpx;
 		.code{
-			margin-left: 58rpx;
-			// width: 200rpx;
-			font-size: 28rpx;
+			margin-left: 20rpx;
+			 width: 240rpx;
+			font-size: 32rpx;
 			text-align: center;
 			color: #28b07c;
 		}
@@ -370,5 +438,32 @@
 		height: 36rpx;
 		margin-left: 12rpx;
 		margin-right: -30rpx;
+	}
+	.checkbox-xy{
+		display: flex;
+		margin-top: 20px;
+		margin-bottom:60px;
+	}
+	.auth-clause {
+		display: flex;
+		align-items: center;
+		font-size: 30rpx;
+		color: #909090;
+		margin-left: 50rpx;
+	}
+	switch.orange[checked] .wx-switch-input,
+	checkbox.orange[checked] .wx-checkbox-input,
+	radio.orange[checked] .wx-radio-input,
+	switch.orange.checked .uni-switch-input,
+	checkbox.orange.checked .uni-checkbox-input,
+	radio.orange.checked .uni-radio-input {
+		background-color: #686868 !important;
+		border-color: #000000 !important;
+		color: #ffffff !important;
+	}
+	.linkxy{
+		margin-left: 10px;
+		margin-right: 10px;
+		color: #0055ff;
 	}
 </style>

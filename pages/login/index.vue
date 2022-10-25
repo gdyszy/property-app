@@ -10,13 +10,20 @@
 			</view>
 		</view>
 
-	<!-- 	<view class="regbutton_login" @click='wechatLogin' v-if="H5Wechat">
-			<button class="button" open-type='getUserInfo'>微信快捷登录/注册</button>
-		</view> -->
+		<!--  <view class="regbutton_login"  @click='wechatLogin' v-if="H5Wechat">
+	  	<button class="button"  open-type='getUserInfo'>微信快捷登录/注册</button>
+	  </view> -->
+	  <!-- 同意服务条款 -->
+	  <checkbox-group :class="checked == 1 ? 'shake-horizontal' : ''" class="auth-clause" @change="CheckboxChange" v-if="H5Wechat">
+	  	<checkbox class="orange" :class="checked == 2 ? 'checked' : ''" :checked="checked == 2 ? true : false" value="2" />
+	  	<view>
+	  		我已阅读<text class="linkxy" @tap="onDetails(8, '用户协议')">用户协议</text>及<text class="linkxy" @tap="onDetails(9, '隐私保护')">隐私权保护声明</text>
+	  	</view>
+	  </checkbox-group>
 		<view class="regbutton_login" @click='wechatLogin' v-if="H5Wechat">
 			<button class="button" open-type='getUserInfo'>微信快捷登录/注册</button>
 		</view>
-		<view class="regbutton_login" @click="clickonlog">
+		<view class="regbutton_login" @click="clickonlog" v-if="!H5Wechat">
 			<button class="regbutton">账号快捷登录/注册</button>
 		</view>
 
@@ -33,6 +40,8 @@
 	export default {
 		data() {
 			return {
+				checked: 0,
+				isChecked:false,
 				H5Wechat: true,
 				appid: '',
 				code: '',
@@ -62,6 +71,10 @@
 			wybLoading
 		},
 		methods: {
+			CheckboxChange(e) {
+				this.checked = e.detail.value;
+				this.isChecked = !this.isChecked
+			},
 			// 跳转到账号密码页面
 			clickonlog() {
 				//console.log(JSON.stringify())
@@ -71,6 +84,14 @@
 				});
 			},
 			wechatLogin() {
+				if(!this.isChecked){
+					uni.showToast({
+						title: '请勾选同意选项',
+						icon: 'none',
+						duration: 2000,
+					});
+					return
+				}
 				let that = this
 				this.$refs.loading.showLoading()
 				let nonce = Math.random().toString(36).substr(2)
@@ -361,5 +382,28 @@
 		background-color: #FFFFFF;
 		font-size: 32rpx;
 		color: #4D4D4D;
+	}
+	.auth-clause {
+		display: flex;
+		align-items: center;
+		font-size: 30rpx;
+		color: #909090;
+		margin-top: 80rpx;
+		margin-left: 50rpx;
+	}
+	switch.orange[checked] .wx-switch-input,
+	checkbox.orange[checked] .wx-checkbox-input,
+	radio.orange[checked] .wx-radio-input,
+	switch.orange.checked .uni-switch-input,
+	checkbox.orange.checked .uni-checkbox-input,
+	radio.orange.checked .uni-radio-input {
+		background-color: #686868 !important;
+		border-color: #000000 !important;
+		color: #ffffff !important;
+	}
+	.linkxy{
+		margin-left: 10px;
+		margin-right: 10px;
+		color: #0055ff;
 	}
 </style>

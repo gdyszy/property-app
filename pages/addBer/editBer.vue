@@ -63,7 +63,7 @@
 				<view class="text">手机号码<i style="color: #d93232;">*</i></view>
 				<input type="text" v-model="phone" maxlength="11" />
 			</view>
-			<view class="msg">
+			<!-- <view class="msg">
 				<view class="text">验证码<i style="color: #d93232;">*</i></view>
 				<view style="display: flex; align-items: center;">
 					<input type="text" v-model="code" @focus="code=''" @blur="code==''?code='请输入验证码':''"
@@ -71,7 +71,7 @@
 					<view class="code" @tap='getCode' v-if="!resend">获取验证码</view>
 					<view class="resend" v-if="resend">重新获取({{ countdown }})</view>
 				</view>
-			</view>
+			</view> -->
 		</view>
 		<view class="btn" @tap="save()">保存</view>
 	</view>
@@ -228,6 +228,15 @@
 			},
 			//提交修改
 			save() {
+				const c_mobile = /^1(3|4|5|6|7|8|9)\d{9}$/;  //判断手机号码正则
+				if(!c_mobile.test(this.phone)){
+					uni.showToast({
+						title: '请输入正确手机号码',
+						icon: 'none',
+						duration:2000
+					})
+					return false
+				}
 				this.request({
 					url: '/v1/members/' + this.berId + '?handler=changeInfo',
 					method: 'PUT',

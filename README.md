@@ -215,6 +215,9 @@ H5 版本二维码
 
 以上方法都是基于[HBuilderX工具开发](https://uniapp.dcloud.io/quickstart?id=_1-%e9%80%9a%e8%bf%87-hbuilderx-%e5%8f%af%e8%a7%86%e5%8c%96%e7%95%8c%e9%9d%a2)的方法
 
+# 修改文章id
+* 用户协议、 需要修改id ， 在 pages/login/index 页面 大概20行， pages/addBer/addBer 页面 大概69行 ，pages/my/boundUSER 页面 大概114行
+* 找到 'onDetails(5'， 将5 修改为后台录入用户协议文章对应的id ,'onDetails(6' 将6 修改为后台录入隐私保护文章对应的id
 
 扫码添加技术微信支持，备注说明对应的插件名称
 

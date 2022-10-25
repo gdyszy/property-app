@@ -30,7 +30,7 @@
 				</picker>
 			</view>
 			<view class="msg">
-				<view class="text">身份证号<i style="color: #d93232;">*</i></view>
+				<view class="text">身份证号</view>
 				<input type="text" placeholder-style="color:#b3b3b3" v-model="peopleID" maxlength="18"  @focus="IdPlaceholder=''" @blur="peopleID==''?IdPlaceholder='请输入身份证号码':''" :placeholder="IdPlaceholder" />
 			</view>
 			<view class="msg">
@@ -53,15 +53,25 @@
 				<view class="text">手机号码<i style="color: #d93232;">*</i></view>
 				<input type="text" placeholder-style="color:#b3b3b3" v-model="phone" maxlength="11" @focus="phonePlaceHolder=''" @blur="phone==''?phonePlaceHolder='请输入手机号码':''" :placeholder="phonePlaceHolder" />
 			</view>
-			<view class="msg">
+<!-- 			<view class="msg">
 				<view class="text">验证码<i style="color: #d93232;">*</i></view>
 				<view style="display: flex; align-items: center;">
 					<input type="text" placeholder-style="color:#b3b3b3" v-model="code" @focus="codePlaceHolder=''" @blur="code==''?codePlaceHolder='请输入验证码':''" adjust-position :placeholder="codePlaceHolder" />
 					<view class="code" @tap='getCode' v-if="!resend">获取验证码</view>
 					<view class="resend" v-if="resend">重新获取({{ countdown }})</view>
 				</view>
+			</view> -->
+			<view class="checkbox-xy">
+			<!-- 同意服务条款 -->
+			<checkbox-group :class="checked == 1 ? 'shake-horizontal' : ''" class="auth-clause" @change="CheckboxChange">
+				<checkbox class="orange" :class="checked == 2 ? 'checked' : ''" :checked="checked == 2 ? true : false" value="2" />
+				<view>
+					我已阅读<text class="linkxy" @tap="onDetails(8, '用户协议')">用户协议</text>及<text class="linkxy" @tap="onDetails(8, '隐私保护')">隐私权保护声明</text>
+				</view>
+			</checkbox-group>
 			</view>
 		</view>
+		
 		<view class="btn" @tap="add()">创建</view>
 	</view>
 </template>
@@ -73,6 +83,8 @@
 			            format: true
 			        })
 			return {
+				checked: 0,
+				isChecked:false,
 				sex: 0, 
 				resend:false, //控制重新获取
 				name: '',
@@ -102,6 +114,10 @@
 			}
 		},
 		methods: {
+			CheckboxChange(e) {
+				this.checked = e.detail.value;
+				this.isChecked = !this.isChecked
+			},
 			selectOtype(n) {
 				this.owner_type = n
 				if(n === 2){
@@ -163,6 +179,23 @@
 				}
 			},
 			add(){
+				if(!this.isChecked){
+					uni.showToast({
+						title: '请勾选同意选项',
+						icon: 'none',
+						duration: 2000,
+					});
+					return
+				}
+				const c_mobile = /^1(3|4|5|6|7|8|9)\d{9}$/;  //判断手机号码正则
+				if(!c_mobile.test(this.phone)){
+					uni.showToast({
+						title: '请输入正确手机号码',
+						icon: 'none',
+						duration:2000
+					})
+					return false
+				}
 				this.request({
 					url: '/v1/members',
 					method: 'POST',
@@ -252,5 +285,31 @@
 		height: 36rpx;
 		// margin-top: -15rpx;
 		margin-left: 12rpx;
+	}
+	.checkbox-xy{
+		display: flex;
+		margin-bottom: 40px;
+	}
+	.auth-clause {
+		display: flex;
+		align-items: center;
+		font-size: 30rpx;
+		color: #909090;
+		margin-left: 50rpx;
+	}
+	switch.orange[checked] .wx-switch-input,
+	checkbox.orange[checked] .wx-checkbox-input,
+	radio.orange[checked] .wx-radio-input,
+	switch.orange.checked .uni-switch-input,
+	checkbox.orange.checked .uni-checkbox-input,
+	radio.orange.checked .uni-radio-input {
+		background-color: #686868 !important;
+		border-color: #000000 !important;
+		color: #ffffff !important;
+	}
+	.linkxy{
+		margin-left: 10px;
+		margin-right: 10px;
+		color: #0055ff;
 	}
 </style>

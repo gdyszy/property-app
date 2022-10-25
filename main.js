@@ -13,6 +13,19 @@ Vue.prototype.$app_secret = 'abcdef';
 var plugin = request({
 	baseURL: server_url
 })
+// ´ò¿ªÏêÇéÒ³
+Vue.prototype.onDetails = function(id, title) {to(`/pages/article/details?id=${id}&title=${title}`)}
+const to = (url, animationType = 'pop-in', animationDuration = 300) => {
+	uni.navigateTo({
+		url,
+		animationType,
+		animationDuration,
+		success: function (res) {
+		},
+		fail: function (e) {
+		}
+	})
+}
 
 Vue.prototype.$save_client = function(uid) {
 	var that = this;

@@ -298,6 +298,12 @@
                 "enablePullDownRefresh": false
             }
             
+        },
+		{
+			"path": "pages/article/details",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
         }
 
 	],
