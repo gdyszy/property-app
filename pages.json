@@ -1,0 +1,348 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/repair/repair" //故障报修
+		},
+		{
+			"path": "pages/notice/notice",
+			"style": {
+				"navigationBarTitleText": "社区新闻"
+			}
+		},
+		{
+			"path": "pages/market/market",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/noticeDetail/noticeDetail",
+			"style": {
+				"navigationBarTitleText": "社区新闻"
+			}
+		}, {
+			"path": "pages/LivingExpenses/LivingExpenses",
+			"style": {
+				"navigationBarTitleText": "生活缴费",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/my/index",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": "false",
+					"subNVues": [{
+						"id": "tuichu", // 唯一标识  
+						"path": "pages/my/subNVue/tuichu", // 页面路径  
+						"type": "popup",
+						"style": {
+							"mask": "rgba(0,0,0,0.5)",
+							"width": "100%",
+							// "top":"40%",
+							"height": "100%",
+							"background": "transparent"
+						}
+					}]
+				}
+
+			}
+		}, {
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "智慧家园"
+			}
+		}, {
+			"path": "pages/registered/index", //注册
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/theLogin/index", //登录
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/trading/index",
+			"style": {
+				"navigationBarTitleText": "我的交易"
+			}
+		}, {
+			"path": "pages/information/index"
+		}, {
+			"path": "pages/feedback/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/myMessage/index",
+			"style": {
+				"navigationBarTitleText": "我的消息"
+			}
+		}, {
+			"path": "pages/repair/index",
+			"style": {
+				"navigationBarTitleText": "我的报修"
+			}
+		}, {
+			"path": "pages/repair/details"
+		}, {
+			"path": "pages/pay_detail/carparker"
+		}, {
+			"path": "pages/pay_detail/propertyPay"
+		}, {
+			"path": "pages/familyBer/familyBer",
+			"style": {
+				"navigationBarTitleText": "家庭成员"
+			}
+		}, {
+			"path": "pages/berDetail/berDetail"
+		}, {
+			"path": "pages/addBer/addBer",
+			"style": {
+				"navigationBarTitleText": "家庭成员"
+			}
+		},
+		{
+			"path": "pages/demand/demand",
+			"style": {
+				"navigationBarTitleText": "市场交易"
+			}
+		},
+		{
+			"path": "pages/my/boundUSER",
+			"style": {
+				"navigationBarTitleText": "业主绑定"
+			}
+		}, {
+			"path": "pages/my/BindOwner",
+			"style": {
+				"navigationBarTitleText": "业主信息"
+			}
+		}, {
+			"path": "pages/yijang/index",
+			"style": {
+				"navigationBarTitleText": "我的意见"
+			}
+		}, {
+			"path": "pages/webview/index"
+		}, {
+			"path": "pages/login/bindtel"
+		}, {
+			"path": "pages/accountManagement/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/password/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/About/index",
+			"style": {
+				"app-plus": {
+					// "titleNView":"false",
+					"subNVues": [{
+						"id": "popup", // 唯一标识  
+						"path": "pages/About/subNvue/popop", // 页面路径  
+						"type": "popup",
+						"style": {
+							"mask": "rgba(0,0,0,0.5)",
+							"width": "100%",
+							"height": "100%",
+							"background": "transparent"
+						}
+					}]
+				}
+			}
+		},
+		{
+			"path": "pages/addBer/editBer",
+			"style": {
+				"navigationBarTitleText": "编辑成员"
+			}
+		},
+		{
+			"path": "pages/login/wechat",
+			"style": {
+				"navigationBarTitleText": "授权登录"
+			}
+		},
+		{
+			"path": "pages/wy/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/wy/login/index",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/wy/memberAudit/memberAudit/memberAudit",
+			"style": {
+				"navigationBarTitleText": "人员审核",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/wy/memberAudit/auditMessage/auditMessage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/wy/my/index",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": "false",
+					"subNVues": [{
+						"id": "tuichu", // 唯一标识  
+						"path": "pages/wy/my/subNVue/tuichu", // 页面路径  
+						"type": "popup",
+						"style": {
+							"mask": "rgba(0,0,0,0.5)",
+							"width": "100%",
+							// "top":"40%",
+							"height": "100%",
+							"background": "transparent"
+						}
+					}]
+				}
+
+			}
+		}, {
+			"path": "pages/wy/repair/index",
+			"style": {
+				"navigationBarTitleText": "报修管理",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/wy/repair/repairMessage/repairMessage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/wy/complain/index",
+			"style": {
+				"navigationBarTitleText": "投诉管理",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/wy/complain/complainMsg/complainMsg",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+		, {
+			"path": "pages/wy/duty/index",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+
+			}
+
+		}, {
+			"path": "pages/wy/duty/ondutyMessage/ondutyMessage",
+			"style": {
+				"navigationBarTitleText": "更新日期",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		 {
+			"path": "pages/wy/duty/addOnduty/addOnduty",
+			"style": {
+				"navigationBarTitleText": "值班安排",
+				"enablePullDownRefresh": false
+			}
+
+		},{
+			"path": "pages/wy/msg/index",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true,
+				"disableScroll":false
+			}
+
+		}
+	    ,{
+            "path" : "pages/wy/msg/msgInfo",
+            "style": {
+            	"navigationBarTitleText": "消息详情",
+            	"enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/wy/msg/addMessage",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		"scrollIndicator": "none",
+		"bounce": "none"
+		// "navigationStyle": "custom",
+	},
+	"tabBar": {
+		"fontSize": "12px",
+		"color": "#a6a6a6",
+		"selectedColor": "#28b07c",
+		"borderStyle": "black",
+		"iconWidth": "24px",
+		"spacing": "2px",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/index/btn_09_nor.png",
+				"text": "首页",
+				"selectedIconPath": "static/images/index/btn_09_sel.png"
+			},
+			{
+				"pagePath": "pages/market/market",
+				// "iconPath":"static/images/index/btn_10_nor.png",
+				"iconPath": "static/images/index/btn_10.png",
+				"selectedIconPath": "static/images/index/btn_10_sel.png",
+				"text": "市场"
+			}, {
+				"pagePath": "pages/my/index",
+				"iconPath": "static/images/index/btn_11_nor.png",
+				"text": "个人中心",
+				"selectedIconPath": "static/images/index/btn_11_sel.png"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}

@@ -1,0 +1,69 @@
+/* 底部按钮 */
+.btn {
+		width: 100%;
+		height: 104rpx;
+		text-align: center;
+		line-height: 104rpx;
+		color: #FFFFFF;
+		font-size: 34rpx;
+		background-color: #68cda2;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+}
+
+.box {
+	padding: 0px 28rpx;
+	background-color: #FFFFFF;
+}
+.head{
+		font-size: 44rpx;
+		color: #333333;
+		font-weight: bold;
+		padding-top: 12rpx;
+		padding-bottom: 38rpx;
+		border-bottom: 1px solid #e6e6e6;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+}
+.title {
+		font-size: 32rpx;
+		color: #333333;
+		margin-top: 32rpx;
+		font-weight: bold;
+}
+.msg {
+	margin-bottom: 20rpx;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 104rpx;
+	align-items: center;
+	border-bottom: 1px solid #e6e6e6;
+}
+.text {
+		display: flex;
+		font-size: 30rpx;
+		color: #262626;
+}
+input{
+		text-align: right;
+		font-size: 30rpx;
+		color: #4d4d4d;
+	}
+
+
+.textInput {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 28rpx;
+}
+.text_left {
+	font-size: 30rpx;
+	color: #262626;
+}
+.text_right {
+	font-size: 30rpx;
+	color: #808080;
+}

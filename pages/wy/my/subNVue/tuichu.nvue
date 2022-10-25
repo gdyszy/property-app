@@ -1,0 +1,81 @@
+<template>
+	<div class="tuichu">
+		<div class="popup">
+			<!-- 弹出层 -->
+			<text class="top">退出账号</text>
+			<div class="content">
+				<text class="con-top">确定要退出当前账号吗？</text>
+			</div>
+			
+			<div class="button">
+				<text class="update" @click.stop="outinfo">退出</text>
+				<text class="cancel" @click.stop="cancels">取消</text>
+			</div>	 
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		data(){
+			return{
+				
+			}
+		},
+		methods:{
+			outinfo(){
+				uni.$emit('outPopup')
+			},
+			cancels(){
+				uni.$emit('quexiao')
+				// const subNVue = uni.getSubNVueById('tuichu');
+				// subNVue.hide()
+				// console.log()
+				// const curNVue = uni.getCurrentSubNVue()
+				// curNVue.hide()
+			}
+			
+		}
+	}
+</script>
+
+<style>
+	.tuichu{
+		justify-content: center;
+	}
+	.popup{
+		padding-top: 60rpx;
+		padding-left: 48rpx;
+		margin-left: 50rpx;
+		margin-right: 50rpx;
+		background-color: #FFFFFF;
+		border-radius: 12rpx;
+	}
+	.top{
+		font-size: 32rpx;
+		color: #262626;
+	}
+	.con-top{
+		margin-top: 40rpx;
+		font-size: 30rpx;
+		color: #808080;
+		line-height: 46rpx;
+		margin-bottom: 88rpx;
+	}
+	.button{
+		position: relative;
+		height: 76rpx;
+	}
+	.cancel{
+		position: absolute;
+		right: 48rpx;
+		font-size: 32rpx;
+		color: #262626;
+	}
+	.update{
+		position: absolute;
+		left: 0;
+		font-size: 32rpx;
+		color: #28b07c;
+	}
+</style>

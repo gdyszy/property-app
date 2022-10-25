@@ -1,0 +1,13 @@
+{
+  "name": "yszyun",
+  "version": "1.0.0",
+  "description": "uni-app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yszyun",
+  "dependencies": {
+    "jweixin-module": "^1.6.0"
+  }
+}

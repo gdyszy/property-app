@@ -1,0 +1,93 @@
+<template>
+	<div class="tuichu" @click.stop="tuichuas">
+		<div class="popup">
+			<!-- 弹出层 -->
+			<text class="top">更新新版本</text>
+			<div class="content">
+				<text class="con-top">更新内容</text>
+				<div class="tontentText">
+					<text class="contents">{{contents}}</text>
+				</div>
+			</div>
+			
+			<div class="button">
+				<text @click.stop="outinfo" class="update">现在更新</text>
+			    <text class="cancel" @click.stop="cancels">取消</text>
+			</div>	 
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		data(){
+			return{
+				contents:''
+			}
+		},
+		onShow() {
+			let that = this
+		    uni.$on('vers',function(data){
+		        that.contents = data.contents
+		    })	
+		},
+		methods:{
+			tuichuas(){},
+			outinfo(){
+				uni.$emit('outinfos')
+			},
+			cancels(){
+				uni.$emit('qxGengxin',{msg:'页面更新'})
+			}
+			
+		}
+	}
+</script>
+
+<style>
+	.tuichu{
+		justify-content: center;
+	}
+	.popup{
+		padding-top: 60rpx;
+		padding-left: 48rpx;
+		margin-left: 28rpx;
+		margin-right: 28rpx;
+		background-color: #FFFFFF;
+		border-radius: 12rpx;
+	}
+	.top{
+		font-size: 32rpx;
+		color: #262626;
+	}
+	.content{
+		margin-top: 40rpx;
+		margin-bottom: 88rpx;
+	}
+	.button{
+		position: relative;
+		height: 76rpx;
+	}
+	.update{
+		position: absolute;
+		right: 48rpx;
+		font-size: 32rpx;
+		color: #28b07c;
+	}
+	.cancel{
+		position: absolute;
+		left: 0;
+		font-size: 32rpx;
+		color: #262626;
+	}
+	.con-top{
+		font-size: 30rpx;
+		color: #808080;
+		line-height: 46rpx;
+	}
+	.contents{
+		font-size: 30rpx;
+		color: #808080;
+		line-height: 46rpx;
+	}
+</style>
