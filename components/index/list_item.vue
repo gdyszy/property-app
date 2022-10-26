@@ -11,7 +11,6 @@
 					<image src="../../static/images/index/btn_06_view.png" style="width: 36rpx; height: 36rpx; margin-left: 34rpx; margin-right: 5rpx;" mode="scaleToFill" />
 					<view class="detail_text">{{ item.views }}</view>
 				</view>
-				<view v-if="item.source" class="detail_source">来源:  {{ item.source }}</view>
 				
 			</view>
 		</view>
@@ -72,11 +71,6 @@
 					font-size: 24rpx;
 					color: #b3b3b3;
 				}
-			}
-			.detail_source{
-				margin-top: 15rpx;
-				font-size: 22rpx;
-				color: #b3b3b3;
 			}
 		}
 	}

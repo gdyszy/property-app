@@ -70,6 +70,9 @@
 					method: 'get'
 				}).then((res)=>{
 					this.article = res.data
+					if(this.article.photo==this.$websiteUrl){
+						this.article.photo='../../static/common/noImg.png'
+					}
 					this.formatRichText(res.data.content)
 				});
 				this.addView()
