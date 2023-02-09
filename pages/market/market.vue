@@ -229,8 +229,8 @@
 <style scoped lang="scss">
 	.uni-tab-bar {
 		// margin-top: 112rpx;
-		display: flex;
-		flex: 1;
+		// display: flex;
+		// flex: 1;
 		flex-direction: column;
 		overflow: hidden;
 		height: 100%;
