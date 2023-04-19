@@ -141,8 +141,8 @@ export default {
 
 <style lang="scss" scoped>
 	.uni-tab-bar {
-		display: flex;
-		flex: 1;
+	/* 	display: flex;
+		flex: 1; */
 		flex-direction: column;
 		overflow: hidden;
 		height: 100%;
