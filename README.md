@@ -6,19 +6,26 @@
 多小区物业管理系统APP能够覆盖小区业主日常生活遇到的多个场景，如：物业费缴费、停车费缴纳、家庭成员管理、故障报修及进度查询、小区通知公告、二手商品交易。帮小区业主轻松解决日常问题。一个APP在手，生活无“忧”。
 目前APP已实现功能有：
 1. 登录及注册：登录类型选择
-2. 首页：首页、通知公告、生活缴费、家庭成员、故障报修；
+2. 首页：首页、通知公告、生活缴费、家庭成员、故障报修；签到活动；投票管理；门禁人脸
 3. 市场：旧货出售、求购需求；
-4. 我的：我的、个人资料信息、物业信息、我的交易、我的报修单、消息、住户绑定、意见反馈、我的意见、物业客服、技术支持、版本号、登出。
-5. 物业管理：报修管理、投诉管理、值班管理、消息管理
+4.小区活动
+5. 我的：我的、个人资料信息、物业信息、我的交易、我的报修单、消息、住户绑定、意见反馈、我的意见、物业客服、技术支持、版本号、登出。
+6. 物业管理：报修管理、投诉管理、值班管理、消息管理
 
 缴费便捷：通过多小区物业管理系统APP即可便捷缴交物业费、停车费等费用。
 报修便捷：通过多小区物业管理系统APP即可便捷进行物业报修，进度查询等。
 
 功能截图
 
-![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_f36efe20744760b8feda8a4e32bdd1ed_r.jpg)
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_28229a51e024854202f4d20e7b314f7e_r.jpg)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_89af47ad4891cf036972a51dc6343fc3_r.jpg)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_8aea90a345cdc046ab4f0179682dd320_r.jpg)
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_5876456eb69a7f230ee2946564539e16_r.jpg)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_a978e3e157da213b173e0b9b9552b50c_r.jpg)
 
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_0105a861241d01a7b8832629146636a9_r.jpg)
@@ -33,7 +40,6 @@
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_4b70b31c9a192cb9024b3138599d6de6_r.jpg)
 
 查询便捷：商品交易情况、报修情况、物业情况等一目了然。
-
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_fa96a4e4343239461dd62d4bdfa568e6_r.jpg)
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_157f1ced096d9f63a8afdfea3bf67770_r.jpg)
@@ -59,6 +65,9 @@
 12. 值班管理
 13. 权限管理
 14. 系统配置
+15. 签到管理
+16. 投票管理
+17. 访客登记
 
 
 # 产品演示
@@ -75,9 +84,6 @@ H5 版本二维码
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_2af2ac380ce7c2aa2368714572a3157b_r.png)
 
-安卓版本二维码
-
-![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_4662b1b616f88994b92a46c643bd78fe_r.png)
 
 小程序版本
 
@@ -110,3 +116,6 @@ H5 版本二维码
 
 ![](https://wiki.yszyun.com/uploads/moa-admin/images/m_a3639d790e5a0b1f9d1a1dd5e695894c_r.png)
 
+
+前端免费开源，后端付费，详情咨询电话： 400-008-1668
+邮箱：marketing@yszyun.com

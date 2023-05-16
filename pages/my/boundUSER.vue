@@ -115,6 +115,7 @@
 				</view>
 			</checkbox-group>
 			</view>
+			<view class="emptys"></view>
 <!-- 			<view class="dem_message">
 				<view class="danxuan">
 					<view class="fee_rad">
@@ -423,7 +424,6 @@
 	}
 	
 	.button{
-		margin-top: 80rpx;
 		width: 100%;
 		height: 100rpx;
 		background-color: #68cda2;
@@ -442,7 +442,11 @@
 	.checkbox-xy{
 		display: flex;
 		margin-top: 20px;
-		margin-bottom:60px;
+		margin-bottom:20px;
+	}
+	.emptys{
+		width: 100%;
+		height: 60px;
 	}
 	.auth-clause {
 		display: flex;

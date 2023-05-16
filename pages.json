@@ -88,6 +88,27 @@
 				"navigationBarTitleText": "我的消息"
 			}
 		}, {
+      "path": "pages/vote/vote",
+      "style": {
+      	"navigationBarTitleText": "项目投票"
+      }
+    }, {
+      "path": "pages/activities/activityDtail/activityDtail",
+      "style": {
+      	"navigationBarTitleText": "活动详情"
+      }
+    }, {
+      "path": "pages/vote/item",
+      "style": {
+      	"navigationBarTitleText": "项目详情"
+      }
+    },{
+      "path": "pages/signIn/index",
+      "style": {
+      	"navigationBarTitleText": "签到活动",
+        "navigationStyle": "custom"
+      }
+    },{
 			"path": "pages/repair/index",
 			"style": {
 				"navigationBarTitleText": "我的报修"
@@ -98,6 +119,8 @@
 			"path": "pages/pay_detail/carparker"
 		}, {
 			"path": "pages/pay_detail/propertyPay"
+		}, {
+			"path": "pages/pay_detail/watersPay"
 		}, {
 			"path": "pages/familyBer/familyBer",
 			"style": {
@@ -175,6 +198,11 @@
 			"path": "pages/login/wechat",
 			"style": {
 				"navigationBarTitleText": "授权登录"
+			}
+		}, {
+			"path": "pages/faces/index",
+			"style": {
+				"navigationBarTitleText": ""
 			}
 		},
 		{
@@ -304,8 +332,13 @@
 			"style": {
 				"navigationBarTitleText": "详情"
 			}
+        },
+        {
+          "path": "pages/activities/activities",
+          "style": {
+          	"navigationBarTitleText": "小区活动"
         }
-
+        }
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -335,6 +368,12 @@
 				"iconPath": "static/images/index/btn_10.png",
 				"selectedIconPath": "static/images/index/btn_10_sel.png",
 				"text": "市场"
+			}, {
+				"pagePath": "pages/activities/activities",
+				// "iconPath":"static/images/index/btn_10_nor.png",
+				"iconPath": "static/images/index/btn_10.png",
+				"selectedIconPath": "static/images/index/btn_10_sel.png",
+				"text": "小区活动"
 			}, {
 				"pagePath": "pages/my/index",
 				"iconPath": "static/images/index/btn_11_nor.png",

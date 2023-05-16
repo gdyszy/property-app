@@ -33,6 +33,19 @@
 						</view>
 					</scroll-view>
 				</swiper-item>
+				<swiper-item>
+					<scroll-view scroll-y class="list" @scrolltolower='lower' :scroll-top="scrollTop">
+						<view v-if="watersList.length != 0">
+							<LivingPay :list= 'watersList' @pay3='pay3' />
+						</view>
+						<view v-else>
+							<view class="nothingImg">
+								<image src="../../static/common/nothing.png" mode="aspectFill" style="width: 100%; height: 100%;"></image>
+							</view>
+							<view class="nothing">没有数据</view>
+						</view>
+					</scroll-view>
+				</swiper-item>
 			</swiper>   
 		</view>
 	</view>
@@ -50,12 +63,14 @@
 			return {
 				tabBars: [
 					{'name': '物业费','id':0},
-					{'name': '停车费','id':1}
+					{'name': '停车费','id':1},
+					{'name': '水费','id':2}
 				],
 				tabIndex: 0,
 				swiperheight: 500,
 				propertyList: [],//物业费列表
 				parksCarList: [],//停车费列表
+				watersList: [],//水费列表
 				isLoadMore: false ,//是否加载中
 				page: 1,
 				scrollTop: 0
@@ -70,6 +85,7 @@
 			});
 			this.expense();
 			this.parksCar();
+			this.getWaters();
 			 // #ifdef APP-PLUS
 			uni.loadFontFace({
 				 family: 'DINPro-Medium',
@@ -85,6 +101,7 @@
 		onPullDownRefresh() {
 			this.expense();
 			this.parksCar();
+			this.getWaters();
 			setTimeout(function() {
 				uni.stopPullDownRefresh();
 			}, 1000);
@@ -105,6 +122,11 @@
 			pay2(id){
 				uni.navigateTo({
 					url:'../pay_detail/carparker?id='+id
+				})
+			},
+			pay3(id){
+				uni.navigateTo({
+					url:'../pay_detail/watersPay?id='+id
 				})
 			},
 			//物业费
@@ -138,6 +160,18 @@
 					this.parksCarList = res.data
 					for( var i=0;i<this.parksCarList.length;i++){
 						this.parksCarList[i].isPacks = 1
+					}
+				})
+			},
+			//水费
+			getWaters(){
+				this.request({
+					url: '/v1/waters',
+					method:'GET'
+				}).then((res)=>{
+					this.watersList = res.data
+					for( var i=0;i<this.watersList.length;i++){
+						this.watersList[i].isWaters = 1
 					}
 				})
 			},
