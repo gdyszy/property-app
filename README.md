@@ -32,14 +32,17 @@
 
 
 信息便捷：小区费用公开、小区文化、社区新闻等等信息尽在“掌”握。让您随时能够了解到小区的情况。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_48d84a9e559c2d4aa0f5120fde9b57a8_r.jpg)
 
 交易便捷：在APP上即可轻松、便捷进行商品交易，能够使闲置物品变现，更好地满足生活需要，充分利用资源，节约资源，减少垃圾和污染物的排放，保护环境，促进社会经济的可持续发展。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_5d3bdc854098abbcec368ecf7824fc62_r.jpg)
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_4b70b31c9a192cb9024b3138599d6de6_r.jpg)
 
 查询便捷：商品交易情况、报修情况、物业情况等一目了然。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_fa96a4e4343239461dd62d4bdfa568e6_r.jpg)
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_157f1ced096d9f63a8afdfea3bf67770_r.jpg)
