@@ -1,5 +1,6 @@
 <template>
-	<view class='demand'>
+	<view>
+	<view class="demand">
 		<view class="dem_title">
 			业主信息
 		</view>
@@ -89,6 +90,7 @@
 					</view>
 				</view>
 			</view>
+			<!-- #ifdef MP-WEIXIN -->
 			<view class="dem_message">
 				<view class="danxuan">
 					<view class="fee_rad">
@@ -106,6 +108,65 @@
 					<wyb-loading ref="loading" title="加载中..."/>
 				</view>
 			</view>
+			<!-- #endif -->
+			<!-- #ifdef H5 || APP-PLUS-->
+			<!-- <view class="dem_message">
+				<view class="danxuan">
+					<view class="fee_rad">
+						<view class="fee_radio2"><text class="star">*</text>手机号码</view>
+					</view>
+					<view class="input ">
+						<input class="form_input" type="text" placeholder-style="color:#b3b3b3" v-model="inputPhone"
+							maxlength="11" @focus="phonePlaceHolder=''" @blur="inputPhone==''?phonePlaceHolder='请输入手机号码':''"
+							:placeholder="phonePlaceHolder" />
+					</view>
+				</view>
+			</view>
+			<view class="dem_message">
+				<view class="danxuan">
+					<view class="fee_rad">
+						<view class="fee_radio2"><text class="star">*</text>验证码</view>
+					</view>
+					<view class="input" style="margin-left: -20%;">
+						<view style="display: flex; align-items: center;">
+							<input type="text" placeholder-style="color:#b3b3b3;" v-model="sms_code"
+								@focus="codePlaceHolder=''" @blur="sms_code==''?codePlaceHolder='请输入验证码':''"
+								adjust-position :placeholder="codePlaceHolder" maxlength="6"/>
+							<view class="code" @tap='getCode' v-if="!resend">获取验证码</view>
+							<view class="code" v-if="resend">重新获取({{ countdown }})</view>
+						</view>
+					</view>
+				</view>
+			</view> -->
+			<view class="dem_message">
+							<view class="danxuan">
+								<view class="fee_rad">
+								<view class="fee_radio2">手机号码
+								<text class="star">*</text>
+								</view>
+								</view>
+								<view class="input ">
+									<input name="myPhone" v-model="inputPhone" @focus='phonePlaceholder = ""' type="text" :placeholder="phonePlaceholder" @blur="inputPhone==''?phonePlaceholder='请输入电话号码':''" cursor-spacing="80" maxlength="11" />
+								</view>
+							</view>
+						</view>
+						
+						<view class="dem_message">
+							<view class="danxuan">
+								<view class="fee_rad">
+									<view class="fee_radio2">验证码
+										<text class="star">*</text>
+									</view>
+								</view>
+								<view class="inputCode input ">
+									<input class="codename" name="myCode" type="text" :placeholder="codePlaceholder" v-model="code" @blur="code==''?codePlaceholder='请输入验证码':''" @focus='codePlaceholder = ""' cursor-spacing="40" />
+									<view class="code" v-if="verifyShow === true"  @click="getmycode">获取验证码</view>
+									<view class="code" v-else>{{second+'s'}}</view>
+								</view>
+							</view>
+						</view>
+			<!-- #endif -->
+			
 			<view class="checkbox-xy">
 			<!-- 同意服务条款 -->
 			<checkbox-group :class="checked == 1 ? 'shake-horizontal' : ''" class="auth-clause" @change="CheckboxChange">
@@ -115,28 +176,15 @@
 				</view>
 			</checkbox-group>
 			</view>
-			<view class="emptys"></view>
-<!-- 			<view class="dem_message">
-				<view class="danxuan">
-					<view class="fee_rad">
-						<view class="fee_radio2">验证码
-							<text class="star">*</text>
-						</view>
-					</view>
-					<view class="inputCode input ">
-						<input class="codename" name="myCode" type="text" :placeholder="codePlaceholder" v-model="code" @blur="code==''?codePlaceholder='请输入电话号码':''" @focus='codePlaceholder = ""' cursor-spacing="40" />
-						<view class="code" v-if="verifyShow === true"  @click="getmycode">获取验证码</view>
-						<view class="code" v-else>{{second+'s'}}</view>
-					</view>
-				</view>
-			</view> -->
 			
+			<view class="checkbox-xy"></view>
 			<view>
 				<button class="button" type='default'  form-type="submit">提交</button>
 			</view>
 		</form>
 		
 			
+		</view>
 		</view>
 </template>
 
@@ -164,8 +212,7 @@
 			inputPhone: '',
 			phonePlaceholder: '手机号码',
 			codePlaceholder: '请输入验证码',
-			code: '',
-			loginRes:''
+			code: ''
 		};
 	},
 	components:{
@@ -225,6 +272,16 @@
 				});
 				return
 			}
+			// #ifdef APP-PLUS||H5
+			if(!this.code){
+				uni.showToast({
+					title: '请输入验证码',
+					icon: 'none',
+					duration: 2000,
+				});
+				return
+			}
+			// #endif
 			 let userInfo = uni.getStorageSync('myinfo');
 			 let value = e.detail.value
 			 const reg_sfz = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
@@ -424,6 +481,7 @@
 	}
 	
 	.button{
+		margin-top: 80rpx;
 		width: 100%;
 		height: 100rpx;
 		background-color: #68cda2;
@@ -442,11 +500,7 @@
 	.checkbox-xy{
 		display: flex;
 		margin-top: 20px;
-		margin-bottom:20px;
-	}
-	.emptys{
-		width: 100%;
-		height: 60px;
+		margin-bottom:60px;
 	}
 	.auth-clause {
 		display: flex;
