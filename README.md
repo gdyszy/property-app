@@ -40,6 +40,7 @@
 
 #### 社区管家
 社区管家模块为小区用户提供专属服务。由一位社区管家对某一区域的用户提供专属服务。具体服务内容可在管理后台进行配置。以“联系管家”和“车辆证照提交”为例。点击“联系管家”可直接呼叫管理或者发送信息给管家，由管家提供及时服务。点击“车辆证照提交”，在提交界面输入内容，描述、上传车辆证件、选择有效期，然后点击“提交”。完成车辆证照提交。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7073c36d2d26716f963111676c726d2a_r.png)
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7a276bc3075ef83370e4b1771745750d_r.png)
@@ -68,6 +69,7 @@
 
 #### 社区黄页
 社区黄页展示社区日常生活需要较常联系的通讯信息。能够查看详情。点击按钮进行号码复制，或者点击直接拨打电话。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_0a49aa9bae66bd5d68b2124482b7f13e_r.png)
 
 #### 一键开门
