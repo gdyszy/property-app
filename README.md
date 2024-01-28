@@ -1,6 +1,115 @@
-<h1> 智慧家园业主版 </h1>
+# 优智小区产品简介
 
-# 产品简介
+优智小区物业管理系统APP能够覆盖小区业主日常生活遇到的多个场景，如：物业费缴费、停车费缴纳、家庭成员管理、故障报修及进度查询、小区通知公告、一键开门、社区管家、来访邀请、社区论坛、操作手册、社区投票、社区黄页、社区新闻、社区活动。
+#### 目前已实现功能有：
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_35a6e86b410599c60c09f96dee86312f_r.png)
+
+## 功能截图
+
+#### 首页
+优智小区业主小程序软件功能包含有首页、服务、管家、消息、我的共五大功能模块。
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_e2531b7a2a514cfde4f8471c4d9c55cb_r.png)
+
+首页的功能需要显示哪些模块可以由用户自行控制显示，通过点击“更多应用”进入功能显示管理界面。点击“管理”可以自行添加/减少在首页显示的功能
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_f274bd94253d231a0bb6dde6ff4c46b4_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_598966e7d447c30418c000ccf9d098d4_r.png)
+
+#### 生活缴费
+生活缴费功能实现用户的物业费、停车费、公摊费等各项费用的缴纳、记录的查看。点击“生活缴费”进入到生活缴费账单界面。展示房屋账单及车位账单两部分信息。
+房屋账单：点击“房屋账单”，进入房屋账单列表。用户可一次性缴交2023及2024年的物业管理费，也可以选择交2023年某一月份的物业管理费，也可以将2023年和2024年的物业管理费分开缴费。还可以点击账单缴费底部“去缴费”按钮，选择一键缴费。
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_c96a3ded98e81c181a778e9a22079a6d_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_ff70f1cc01db5c65325a97069eac4723_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7df7ec42409f6429fc8a7b1fda51bc7b_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_864806d2cb052f25f319363d2e164c54_r.png)
+
+#### 社区论坛
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_f220b557a6f8edaeb9f141221aade1eb_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_e94e4b20e10580157e890d9ec2f449a4_r.png)
+
+#### 我的成员
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_664ab19196ef03d382f092f3e4c33b13_r.png)
+
+#### 社区管家
+社区管家模块为小区用户提供专属服务。由一位社区管家对某一区域的用户提供专属服务。具体服务内容可在管理后台进行配置。以“联系管家”和“车辆证照提交”为例。点击“联系管家”可直接呼叫管理或者发送信息给管家，由管家提供及时服务。点击“车辆证照提交”，在提交界面输入内容，描述、上传车辆证件、选择有效期，然后点击“提交”。完成车辆证照提交。
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7073c36d2d26716f963111676c726d2a_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7a276bc3075ef83370e4b1771745750d_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_6dc46c0fd1695eb4b125a8f509559421_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_ea1c3ae9913db4fb40fd7b807461afeb_r.png)
+
+#### 社区投票
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_53a70803d8d354b97ebed3ecc37f5e64_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_4ff00c30a6f35c95729eca0ff6d7383c_r.png)
+
+#### 投诉报修
+投诉报修模块给用户提供一个故障报修，意见反馈，投诉等的渠道。投诉报修模块的功能可以在管理后台进行配置，进行增加或者删减。
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_fdceaa0f7bee415af97e4dddf514d789_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_b03efb40f9856155c1fe8fb988ca8a37_r.png)
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_8d059523de02bb018174b3f8ccdee41b_r.png)
+
+#### 来访邀请
+来访邀请模块实现小区来访人员的登记管理。点击“来访邀请”进入来访登记填写界面。选择来访地点、来访者身份、填写来访事由、来访开始时间、结束时间、验证手机号码、及来访人数，然后点“提交”，完成来访来访。填写后可在“访客邀请记录”中查看来访申请是否审批通过。来访记录状态包含待审核、未开始、进行中、已完成、已拒绝以及已关闭。
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_d290863f8a7df42d06bf01421b943f4e_r.png)
+
+#### 社区黄页
+社区黄页展示社区日常生活需要较常联系的通讯信息。能够查看详情。点击按钮进行号码复制，或者点击直接拨打电话。
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_0a49aa9bae66bd5d68b2124482b7f13e_r.png)
+
+#### 一键开门
+一键开门实现用户的人脸开门，密码开门等功能。点击“微门禁”可添加门禁设备，选择设备的名称，然后点击“提交”待平台审核通过后可使用门禁设备。
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_f7f6c61dbafe6ee5371cb5215568ee73_r.png)
+
+
+### 服务
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7e365b7c24d9a4ff99e8e73812ef1eef_r.png)
+
+
+#### 消息
+消息中心展示系统发送的消息。当用户提交的工单有新进展时系统会发送消息通知用户。用户点击消息，能够跳转到该工单所在模块，能够查看该的最新处理状态。
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_f2c282a57234829053536d0258ced1a4_r.png)
+
+#### 我的
+“我的”模块展示用户的详细信息，包含用户房屋信息、社区论坛状态、预存账户信息、积分账户信息、我的房屋、我的车位、我的成员、人脸录入、邀请好友、我的车辆、生活缴费账单、我的发票列表、我的申请来访记录、我的投诉报修、我参与的投票、我参与的活动、账号管理、客服中心。
+
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_de7e9e191fb598d5372949b1b4c46cc1_r.png)
+
+
+
+扫码添加技术微信支持，备注说明对应的插件名称
+
+![](https://wiki.yszyun.com/uploads/moa-admin/images/m_a3639d790e5a0b1f9d1a1dd5e695894c_r.png)
+
+试用地址， 管理后台
+
+管理后台 [http://wy.yszyun.com](http://wy.yszyun.com)
+账号自行注册，或者扫上方微信二维码，联系技术支持
+
+优智小区小程序码
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_24780ee795992528d5c1db37ccbd9217_r.jpeg)
+
+本系统为SAAS版本，提供免费试用，详情咨询电话： 400-008-1668
+邮箱：marketing@yszyun.com
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# 智慧家园业主版产品简介
 
 
 多小区物业管理系统APP能够覆盖小区业主日常生活遇到的多个场景，如：物业费缴费、停车费缴纳、家庭成员管理、故障报修及进度查询、小区通知公告、二手商品交易。帮小区业主轻松解决日常问题。一个APP在手，生活无“忧”。
