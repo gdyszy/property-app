@@ -2,10 +2,9 @@
 
 优智小区物业管理系统APP能够覆盖小区业主日常生活遇到的多个场景，如：物业费缴费、停车费缴纳、家庭成员管理、故障报修及进度查询、小区通知公告、一键开门、社区管家、来访邀请、社区论坛、操作手册、社区投票、社区黄页、社区新闻、社区活动。
 #### 目前已实现功能有：
-![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_35a6e86b410599c60c09f96dee86312f_r.png)
 
 ## 功能截图
-
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_d4153ea3960a4456d1498aebb1da058a_r.png)
 #### 首页
 优智小区业主小程序软件功能包含有首页、服务、管家、消息、我的共五大功能模块。
 
@@ -40,7 +39,6 @@
 
 #### 社区管家
 社区管家模块为小区用户提供专属服务。由一位社区管家对某一区域的用户提供专属服务。具体服务内容可在管理后台进行配置。以“联系管家”和“车辆证照提交”为例。点击“联系管家”可直接呼叫管理或者发送信息给管家，由管家提供及时服务。点击“车辆证照提交”，在提交界面输入内容，描述、上传车辆证件、选择有效期，然后点击“提交”。完成车辆证照提交。
-
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7073c36d2d26716f963111676c726d2a_r.png)
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7a276bc3075ef83370e4b1771745750d_r.png)
@@ -69,7 +67,6 @@
 
 #### 社区黄页
 社区黄页展示社区日常生活需要较常联系的通讯信息。能够查看详情。点击按钮进行号码复制，或者点击直接拨打电话。
-
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_0a49aa9bae66bd5d68b2124482b7f13e_r.png)
 
 #### 一键开门
@@ -94,20 +91,24 @@
 
 
 
-扫码添加技术微信支持，备注说明对应的插件名称
-
-![](https://wiki.yszyun.com/uploads/moa-admin/images/m_a3639d790e5a0b1f9d1a1dd5e695894c_r.png)
-
 试用地址， 管理后台
 
-管理后台 [http://wy.yszyun.com](http://wy.yszyun.com)
+管理后台 [https://admin.youzhixiaoqu.com/company/#/login?redirect=%2Fhome](https://admin.youzhixiaoqu.com/company)
+
 账号自行注册，或者扫上方微信二维码，联系技术支持
 
 优智小区小程序码
-![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_24780ee795992528d5c1db37ccbd9217_r.jpeg)
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_f037010caa4e77e10768574d3c782c33_r.jpeg)
 
-本系统为SAAS版本，提供免费试用，详情咨询电话： 400-008-1668
+优智物管-员工端 小程序码
+![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_b9d7b0ab7db09ee7471b82f2adc083e0_r.jpeg)
+
+本系统为SAAS版本，提供50户永久免费试用，详情咨询电话： 400-008-1668
 邮箱：marketing@yszyun.com
+扫码添加技术微信支持
+![](https://wiki.yszyun.com/uploads/moa-admin/images/m_a3639d790e5a0b1f9d1a1dd5e695894c_r.png)
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
