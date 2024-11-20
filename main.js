@@ -6,7 +6,7 @@ Vue.config.productionTip = false
 App.mpType = 'app'
 
 import request from 'utils/request.js'
-var server_url = 'https://wy.yszyun.com';
+var server_url = 'https://wm.yszyun.com';
 Vue.prototype.$websiteUrl = server_url;
 Vue.prototype.$appKey = 123456789;
 Vue.prototype.$app_secret = 'abcdef';

@@ -39,6 +39,7 @@
 
 #### 社区管家
 社区管家模块为小区用户提供专属服务。由一位社区管家对某一区域的用户提供专属服务。具体服务内容可在管理后台进行配置。以“联系管家”和“车辆证照提交”为例。点击“联系管家”可直接呼叫管理或者发送信息给管家，由管家提供及时服务。点击“车辆证照提交”，在提交界面输入内容，描述、上传车辆证件、选择有效期，然后点击“提交”。完成车辆证照提交。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7073c36d2d26716f963111676c726d2a_r.png)
 
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_7a276bc3075ef83370e4b1771745750d_r.png)
@@ -63,10 +64,12 @@
 
 #### 来访邀请
 来访邀请模块实现小区来访人员的登记管理。点击“来访邀请”进入来访登记填写界面。选择来访地点、来访者身份、填写来访事由、来访开始时间、结束时间、验证手机号码、及来访人数，然后点“提交”，完成来访来访。填写后可在“访客邀请记录”中查看来访申请是否审批通过。来访记录状态包含待审核、未开始、进行中、已完成、已拒绝以及已关闭。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_d290863f8a7df42d06bf01421b943f4e_r.png)
 
 #### 社区黄页
 社区黄页展示社区日常生活需要较常联系的通讯信息。能够查看详情。点击按钮进行号码复制，或者点击直接拨打电话。
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_0a49aa9bae66bd5d68b2124482b7f13e_r.png)
 
 #### 一键开门
@@ -98,13 +101,15 @@
 账号自行注册，或者扫上方微信二维码，联系技术支持
 
 优智小区小程序码
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_f037010caa4e77e10768574d3c782c33_r.jpeg)
 
 优智物管-员工端 小程序码
+
 ![](https://wiki.yszyun.com/uploads/yszyun-property-app/images/m_b9d7b0ab7db09ee7471b82f2adc083e0_r.jpeg)
 
 本系统为SAAS版本，提供50户永久免费试用，详情咨询电话： 400-008-1668
-邮箱：marketing@yszyun.com
+邮箱：marketing@yszyun.com,
 扫码添加技术微信支持
 ![](https://wiki.yszyun.com/uploads/moa-admin/images/m_a3639d790e5a0b1f9d1a1dd5e695894c_r.png)
 
@@ -189,13 +194,13 @@
 
 # 产品演示
 
-管理后台 [http://wy.yszyun.com](http://wy.yszyun.com)
+管理后台 [http://wm.yszyun.com](http://wm.yszyun.com)
 
 账号：admin5
 密码：123456
 
 前端
-H5版本  [https://wy.yszyun.com/h5/#/](https://wy.yszyun.com/h5/#/)
+H5版本  [https://wm.yszyun.com/h5/#/](https://wm.yszyun.com/h5/#/)
 
 H5 版本二维码
 
